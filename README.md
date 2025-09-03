@@ -57,6 +57,17 @@ cloudfit-devops
 4. **Configuração do CI/CD:**
   - O pipeline de CI/CD está configurado no arquivo `.github/workflows/ci-cd.yml`. Ele executa automaticamente os testes e faz o deploy da aplicação ao realizar push na branch principal.
 
+## Configuração de Variáveis Sensíveis
+
+Para provisionar a infraestrutura AWS e realizar o deploy via CI/CD, é necessário configurar as seguintes variáveis de ambiente no repositório (em **Settings > Secrets and variables > Actions**):
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_SESSION_TOKEN`
+- `EC2_SSH_KEY`
+
+Essas variáveis devem ser adicionadas como **secrets** para garantir a segurança das credenciais e do acesso SSH à instância EC2.
+
 ## Detalhes da Infraestrutura
 A infraestrutura é provisionada usando Terraform, incluindo uma instância EC2 e um grupo de segurança permitindo tráfego HTTP na porta 80.
 

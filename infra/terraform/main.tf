@@ -17,13 +17,20 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
-resource "aws_security_group" "allow_http" {
-  name        = "allow_http"
-  description = "Allow HTTP traffic"
+resource "aws_security_group" "allow_http_and_ssh" {
+  name        = "allow_http_and_ssh"
+  description = "Allow HTTP/SSH traffic"
   
   ingress {
     from_port   = 80
     to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -40,7 +47,7 @@ resource "aws_instance" "fitness_app" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = var.instance_type
   key_name      = var.ssh_key_name
-  security_groups = [aws_security_group.allow_http.name]
+  security_groups = [aws_security_group.allow_http_and_ssh.name]
 
   tags = {
     Name = "FitnessAppInstance"
