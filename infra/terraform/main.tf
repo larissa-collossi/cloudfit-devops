@@ -39,6 +39,7 @@ resource "aws_security_group" "allow_http" {
 resource "aws_instance" "fitness_app" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = var.instance_type
+  key_name      = var.ssh_key_name
   security_groups = [aws_security_group.allow_http.name]
 
   tags = {
