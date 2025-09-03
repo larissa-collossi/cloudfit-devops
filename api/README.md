@@ -1,58 +1,54 @@
-# CloudFit API Documentation
+# Documentação da API CloudFit
 
-## Overview
-CloudFit is a real-time fitness activity monitoring application that provides a REST API for tracking fitness activities. This API is built using Flask and serves as the backend for the CloudFit platform.
+## Visão Geral
+CloudFit é um aplicativo de monitoramento de atividades físicas em tempo real que fornece uma API REST para rastreamento de atividades. Esta API é construída com Flask e serve como backend para a plataforma CloudFit.
 
-## Setup Instructions
+## Instruções de Configuração
 
-### Prerequisites
-- Python 3.7 or higher
-- pip (Python package installer)
+### Pré-requisitos
+- Python 3.7 ou superior
+- pip (gerenciador de pacotes Python)
 
-### Installation
-1. Clone the repository:
+### Instalação
+1. Clone o repositório:
    ```
-   git clone https://github.com/yourusername/cloudfit-devops.git
+   git clone https://github.com/larissa-collossi/cloudfit-devops.git
    cd cloudfit-devops/api
    ```
 
-2. Create a virtual environment (optional but recommended):
+2. Crie um ambiente virtual (opcional, mas recomendado):
    ```
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate  # No Windows use `venv\Scripts\activate`
    ```
 
-3. Install the required dependencies:
+3. Instale as dependências necessárias:
    ```
    pip install -r requirements.txt
    ```
 
-## Running the Application
-To run the Flask application, execute the following command:
+## Executando a Aplicação
+Para executar a aplicação Flask, utilize o seguinte comando:
 ```
 python src/app.py
 ```
-The application will start on `http://localhost:5000`.
+A aplicação será iniciada em `http://localhost:5000`.
 
-## API Endpoints
+## Endpoints da API
 
 ### GET /status
-- **Description**: Returns the status of the API.
-- **Response**:
+- **Descrição**: Retorna o status da API.
+- **Resposta**:
   ```json
   {
     "status": "ok"
   }
   ```
+## Testes
+Os testes ainda estão em desenvolvimento. Em breve, instruções detalhadas serão disponibilizadas nesta seção.
 
-## Testing
-To run tests, ensure you have a testing framework set up (e.g., pytest) and execute:
-```
-pytest
-```
+## Contribuindo
+Contribuições são bem-vindas! Envie um pull request ou abra uma issue para melhorias ou correções de bugs.
 
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
