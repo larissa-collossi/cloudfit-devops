@@ -1,45 +1,45 @@
-# CloudFit Infrastructure Terraform Setup
+# Configuração de Infraestrutura CloudFit com Terraform
 
-This directory contains the Terraform configuration files for provisioning the infrastructure required for the CloudFit application.
+Este diretório contém os arquivos de configuração do Terraform para provisionar a infraestrutura necessária para a aplicação CloudFit.
 
-## Prerequisites
+## Pré-requisitos
 
-- Ensure you have [Terraform](https://www.terraform.io/downloads.html) installed on your machine.
-- Configure your AWS credentials to allow Terraform to provision resources.
+- Certifique-se de ter o [Terraform](https://www.terraform.io/downloads.html) instalado em sua máquina.
+- Configure suas credenciais AWS para permitir que o Terraform provisione recursos.
 
-## Directory Structure
+## Estrutura de Diretórios
 
-- `main.tf`: Contains the main Terraform configuration for provisioning resources.
-- `variables.tf`: Defines the variables used in the Terraform configuration.
-- `outputs.tf`: Specifies the outputs of the Terraform configuration.
+- `main.tf`: Contém a configuração principal do Terraform para provisionamento dos recursos.
+- `variables.tf`: Define as variáveis utilizadas na configuração do Terraform.
+- `outputs.tf`: Especifica as saídas da configuração do Terraform.
 
-## Deployment Instructions
+## Instruções de Deploy
 
-1. Navigate to the `terraform` directory:
+1. Navegue até o diretório `terraform`:
    ```
    cd infra/terraform
    ```
 
-2. Initialize Terraform:
+2. Inicialize o Terraform:
    ```
    terraform init
    ```
 
-3. Review the execution plan:
+3. Revise o plano de execução:
    ```
    terraform plan
    ```
 
-4. Apply the configuration to provision the infrastructure:
+4. Aplique a configuração para provisionar a infraestrutura:
    ```
    terraform apply
    ```
 
-5. To destroy the infrastructure when no longer needed:
+5. Para destruir a infraestrutura quando não for mais necessária:
    ```
    terraform destroy
    ```
 
-## Outputs
+## Saídas
 
-After a successful deployment, you will receive outputs such as the public IP of the EC2 instance, which can be used to access the CloudFit application.
+Após um deploy bem-sucedido, você receberá saídas como o IP público da instância EC2, que pode ser usado para acessar a aplicação CloudFit.
