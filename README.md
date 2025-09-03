@@ -28,7 +28,7 @@ cloudfit-devops
 ## Instruções para Configuração Local
 1. **Clone o repositório:**
   ```
-  git clone <repository-url>
+  git clone https://github.com/larissa-collossi/cloudfit-devops.git
   cd cloudfit-devops
   ```
 
