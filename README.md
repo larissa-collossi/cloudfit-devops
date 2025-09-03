@@ -1,67 +1,67 @@
-# CloudFit DevOps Project
+# Projeto CloudFit DevOps
 
-## Overview
-CloudFit is a startup focused on real-time fitness activity monitoring. This project involves developing a REST API that allows users to track their fitness activities and monitor their progress. The project is structured into two main components: the API and the infrastructure provisioning.
+## Visão Geral
+CloudFit é uma startup focada em monitoramento de atividades físicas em tempo real. Este projeto envolve o desenvolvimento de uma API REST que permite aos usuários acompanhar suas atividades físicas e monitorar seu progresso. O projeto está estruturado em dois principais componentes: a API e o provisionamento de infraestrutura.
 
-## Objectives
-- Develop a REST API using Flask for fitness activity monitoring.
-- Provision infrastructure using Terraform to host the API.
-- Set up a CI/CD pipeline using GitHub Actions for automated testing and deployment.
+## Objetivos
+- Desenvolver uma API REST usando Flask para monitoramento de atividades físicas.
+- Provisionar infraestrutura utilizando Terraform para hospedar a API.
+- Configurar um pipeline de CI/CD usando GitHub Actions para testes automatizados e deploy.
 
-## Project Structure
+## Estrutura do Projeto
 ```
 cloudfit-devops
-├── api                  # Contains the API code
-│   ├── src             # Source code for the API
-│   ├── requirements.txt # Python dependencies
-│   └── README.md       # API documentation
-├── infra                # Infrastructure as code
-│   ├── terraform        # Terraform configurations
-│   └── README.md       # Infrastructure documentation
-├── .github              # GitHub workflows
+├── api                  # Contém o código da API
+│   ├── src             # Código-fonte da API
+│   ├── requirements.txt # Dependências Python
+│   └── README.md       # Documentação da API
+├── infra                # Infraestrutura como código
+│   ├── terraform        # Configurações do Terraform
+│   └── README.md       # Documentação da infraestrutura
+├── .github              # Workflows do GitHub
 │   └── workflows
-│       └── ci-cd.yml   # CI/CD pipeline configuration
-├── .gitignore           # Files to ignore in Git
-└── README.md            # Project overview and documentation
+│       └── ci-cd.yml   # Configuração do pipeline CI/CD
+├── .gitignore           # Arquivos ignorados pelo Git
+└── README.md            # Visão geral e documentação do projeto
 ```
 
-## Local Setup Instructions
-1. **Clone the repository:**
-   ```
-   git clone <repository-url>
-   cd cloudfit-devops
-   ```
+## Instruções para Configuração Local
+1. **Clone o repositório:**
+  ```
+  git clone <repository-url>
+  cd cloudfit-devops
+  ```
 
-2. **Set up the API:**
-   - Navigate to the `api` directory.
-   - Install the required dependencies:
-     ```
-     pip install -r requirements.txt
-     ```
-   - Run the application:
-     ```
-     python src/app.py
-     ```
+2. **Configure a API:**
+  - Navegue até o diretório `api`.
+  - Instale as dependências necessárias:
+    ```
+    pip install -r requirements.txt
+    ```
+  - Execute a aplicação:
+    ```
+    python src/app.py
+    ```
 
-3. **Provision Infrastructure:**
-   - Navigate to the `infra/terraform` directory.
-   - Initialize Terraform:
-     ```
-     terraform init
-     ```
-   - Apply the Terraform configuration:
-     ```
-     terraform apply
-     ```
+3. **Provisione a Infraestrutura:**
+  - Navegue até o diretório `infra/terraform`.
+  - Inicialize o Terraform:
+    ```
+    terraform init
+    ```
+  - Aplique a configuração do Terraform:
+    ```
+    terraform apply
+    ```
 
-4. **CI/CD Setup:**
-   - The CI/CD pipeline is configured in the `.github/workflows/ci-cd.yml` file. It will automatically run tests and deploy the application on push to the main branch.
+4. **Configuração do CI/CD:**
+  - O pipeline de CI/CD está configurado no arquivo `.github/workflows/ci-cd.yml`. Ele executa automaticamente os testes e faz o deploy da aplicação ao realizar push na branch principal.
 
-## Infrastructure Details
-The infrastructure is provisioned using Terraform, which includes an EC2 instance and a security group allowing HTTP traffic on port 80.
+## Detalhes da Infraestrutura
+A infraestrutura é provisionada usando Terraform, incluindo uma instância EC2 e um grupo de segurança permitindo tráfego HTTP na porta 80.
 
-## CI/CD Workflow Explanation
-The CI/CD pipeline automates the process of testing and deploying the application. It includes steps for installing dependencies, running tests, and deploying the application to the provisioned infrastructure.
+## Explicação do Workflow de CI/CD
+O pipeline de CI/CD automatiza o processo de teste e deploy da aplicação. Inclui etapas para instalar dependências, executar testes e fazer o deploy para a infraestrutura provisionada.
 
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
+## Contribuindo
+Contribuições são bem-vindas! Por favor, envie um pull request ou abra uma issue para sugestões ou melhorias.

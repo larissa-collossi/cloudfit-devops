@@ -1,50 +1,50 @@
-# CloudFit Infrastructure Documentation
+# Documentação da Infraestrutura CloudFit
 
-This directory contains the Terraform configuration files for provisioning the infrastructure required for the CloudFit application.
+Este diretório contém os arquivos de configuração do Terraform para provisionar a infraestrutura necessária para a aplicação CloudFit.
 
-## Getting Started
+## Primeiros Passos
 
-To deploy the infrastructure, ensure you have Terraform installed on your machine. You can download it from [Terraform's official website](https://www.terraform.io/downloads.html).
+Para implantar a infraestrutura, certifique-se de que o Terraform está instalado em sua máquina. Você pode baixá-lo no [site oficial do Terraform](https://www.terraform.io/downloads.html).
 
-### Prerequisites
+### Pré-requisitos
 
-- Terraform installed
-- AWS account with appropriate permissions
+- Terraform instalado
+- Conta AWS com permissões apropriadas
 
-### Deployment Instructions
+### Instruções de Implantação
 
-1. **Clone the repository**:
+1. **Clone o repositório**:
    ```
-   git clone https://github.com/yourusername/cloudfit-devops.git
+   git clone https://github.com/cloudfit-devops/cloudfit-devops.git
    cd cloudfit-devops/infra/terraform
    ```
 
-2. **Initialize Terraform**:
+2. **Inicialize o Terraform**:
    ```
    terraform init
    ```
 
-3. **Plan the deployment**:
+3. **Planeje a implantação**:
    ```
    terraform plan
    ```
 
-4. **Apply the configuration**:
+4. **Aplique a configuração**:
    ```
    terraform apply
    ```
 
-5. **Access the outputs**:
-   After the deployment is complete, you can view the outputs (like the public IP of the EC2 instance) by running:
+5. **Acesse os outputs**:
+   Após a conclusão da implantação, você pode visualizar as saídas (como o IP público da instância EC2) executando:
    ```
    terraform output
    ```
 
-### Terraform Commands
+### Comandos Terraform
 
-- `terraform init`: Initializes the Terraform configuration.
-- `terraform plan`: Creates an execution plan, showing what actions Terraform will take.
-- `terraform apply`: Applies the changes required to reach the desired state of the configuration.
-- `terraform destroy`: Destroys the infrastructure managed by Terraform.
+- `terraform init`: Inicializa a configuração do Terraform.
+- `terraform plan`: Cria um plano de execução, mostrando quais ações o Terraform realizará.
+- `terraform apply`: Aplica as alterações necessárias para atingir o estado desejado da configuração.
+- `terraform destroy`: Destroi a infraestrutura gerenciada pelo Terraform.
 
-For more detailed information on Terraform commands, refer to the [Terraform documentation](https://www.terraform.io/docs).
+Para mais informações detalhadas sobre os comandos do Terraform, consulte a [documentação do Terraform](https://www.terraform.io/docs).
