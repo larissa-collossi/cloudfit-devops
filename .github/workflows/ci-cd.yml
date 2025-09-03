@@ -83,7 +83,7 @@ jobs:
           host: ${{ env.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: ./api/*
+          source: ./api
           target: ~/cloudfit-devops/api
 
       - name: Install dependencies and run API
