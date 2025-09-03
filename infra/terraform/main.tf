@@ -47,3 +47,5 @@ resource "aws_instance" "fitness_app" {
 }
 
 output "instance_public_ip" {
+  value = aws_instance.fitness_app.public_ip
+}

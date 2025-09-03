@@ -9,13 +9,3 @@ variable "instance_type" {
   type        = string
   default     = "t2.micro"
 }
-
-variable "ami_id" {
-  description = "The AMI ID for the EC2 instance"
-  type        = string
-}
-
-variable "key_name" {
-  description = "The name of the key pair to use for SSH access"
-  type        = string
-}
