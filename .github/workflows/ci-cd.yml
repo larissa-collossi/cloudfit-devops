@@ -84,7 +84,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           source: ./api
-          target: ~/cloudfit-devops/api
+          target: ~/cloudfit-devops/
 
       - name: Install dependencies and run API
         uses: appleboy/ssh-action@v0.1.10
